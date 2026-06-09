@@ -14650,13 +14650,13 @@
           "rules": [
             {
               "key": 0,
-              "matches": ["[id="com.baidu.netdisk:id/iv_option"]"],
+              "matches": ["[id=\"com.baidu.netdisk:id/iv_option\"]"],
               "actionMaximum": 1,
               "resetMatch": "app"
             },
             {
               "key": 1,
-              "matches": ["[id="com.baidu.netdisk:id/tv_text"][text="不再展示推荐内容"]"],
+              "matches": ["[id=\"com.baidu.netdisk:id/tv_text\"][text=\"不再展示推荐内容\"]"],
               "actionMaximum": 1,
               "resetMatch": "app"
             }
@@ -15971,7 +15971,7 @@
           "name": "功能类-关闭弹幕",
           "rules": [
             {
-              "matches": ["[desc="关闭弹幕"][visibleToUser=true]"],
+              "matches": ["[desc=\"关闭弹幕\"][visibleToUser=true]"],
               "activityIds": ["com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity"]
             }
           ]
@@ -16684,7 +16684,7 @@
           "name": "局部广告-关闭广告",
           "rules": [
             {
-              "matches": ["[id="com.cainiao.wireless:id/single_banner_ad_close"]"],
+              "matches": ["[id=\"com.cainiao.wireless:id/single_banner_ad_close\"]"],
               "activityIds": ["com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity"]
             }
           ]
@@ -16694,7 +16694,7 @@
           "name": "局部广告-关闭推荐广告",
           "rules": [
             {
-              "matches": ["[id="com.cainiao.wireless:id/fl_ylh_feeds_close"]"],
+              "matches": ["[id=\"com.cainiao.wireless:id/fl_ylh_feeds_close\"]"],
               "activityIds": ["com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity"]
             }
           ]
@@ -18001,7 +18001,7 @@
           "name": "局部广告-浮窗广告",
           "rules": [
             {
-              "matches": ["@ImageView <3 FrameLayout < FrameLayout <5 FrameLayout < [vid="picasso_view"][visibleToUser=true]"],
+              "matches": ["@ImageView <3 FrameLayout < FrameLayout <5 FrameLayout < [vid=\"picasso_view\"][visibleToUser=true]"],
               "activityIds": ["com.dianping.social.activity.NewFeedDetailActivity"]
             }
           ]
@@ -25810,7 +25810,7 @@
           "activityIds": ["com.handsgo.jiakao.android.main.activity.MainActivity"],
           "rules": [
             {
-              "matches": ["@[id="com.handsgo.jiakao.android:id/close"]"],
+              "matches": ["@[id=\"com.handsgo.jiakao.android:id/close\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773727357488"]
             }
@@ -25823,7 +25823,7 @@
           "activityIds": ["com.handsgo.jiakao.android.main.activity.MainActivity"],
           "rules": [
             {
-              "matches": ["@[id="com.handsgo.jiakao.android:id/iv_cancel"]"],
+              "matches": ["@[id=\"com.handsgo.jiakao.android:id/iv_cancel\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773732449193"]
             }
@@ -25836,7 +25836,7 @@
           "activityIds": ["com.handsgo.jiakao.android.main.activity.MainActivity"],
           "rules": [
             {
-              "matches": ["@[id="com.handsgo.jiakao.android:id/closeImage"]"],
+              "matches": ["@[id=\"com.handsgo.jiakao.android:id/closeImage\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773732588488"]
             }
@@ -29061,7 +29061,7 @@
           "activityIds": ["com.kugou.android.app.MediaActivity"],
           "rules": [
             {
-              "matches": ["@[id="com.kugou.android:id/sbv"]"],
+              "matches": ["@[id=\"com.kugou.android:id/sbv\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773686207705"]
             }
@@ -31358,7 +31358,7 @@
           "activityIds": ["com.sankuai.waimai.business.page.homepage.MainActivity"],
           "rules": [
             {
-              "matches": ["@[id="com.sankuai.meituan.takeoutnew:id/btn_close"]"],
+              "matches": ["@[id=\"com.sankuai.meituan.takeoutnew:id/btn_close\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773732017046"]
             }
@@ -31883,27 +31883,27 @@
             {
               "key": 0,
               "name": "点击签到按钮",
-              "matches": ["@Image[clickable=true][width=140][height=70] << [text*="漏签"]"],
-              "excludeMatches": ["[text*="今日已签到"][visibleToUser=true]"],
+              "matches": ["@Image[clickable=true][width=140][height=70] << [text*=\"漏签\"]"],
+              "excludeMatches": ["[text*=\"今日已签到\"][visibleToUser=true]"],
               "snapshotUrls": ["https://i.gkd.li/i/1773933529310"]
             },
             {
               "key": 1,
               "name": "关闭签到成功弹窗",
               "preKeys": [0],
-              "matches": ["[text*="签到成功" || text*="获得奖励"][visibleToUser=true]"]
+              "matches": ["[text*=\"签到成功\" || text*=\"获得奖励\"][visibleToUser=true]"]
             },
             {
               "key": 2,
               "name": "关闭签到提醒弹窗",
               "preKeys": [1],
-              "matches": ["[text="不用了" || text="关闭"][visibleToUser=true]"]
+              "matches": ["[text=\"不用了\" || text=\"关闭\"][visibleToUser=true]"]
             },
             {
               "key": 3,
               "name": "从签到页返回",
               "preKeys": [0, 1, 2],
-              "matches": ["@TextView[clickable=true][width=70][height=63] << [text="米游社原神每日签到"]"],
+              "matches": ["@TextView[clickable=true][width=70][height=63] << [text=\"米游社原神每日签到\"]"],
               "snapshotUrls": ["https://i.gkd.li/i/1773933529310"]
             }
           ]
@@ -33123,11 +33123,11 @@
           "rules": [
             {
               "key": 0,
-              "matches": ["@[vid="jd"] <<n [vid="ir"] +3 [vid="f3"]"]
+              "matches": ["@[vid=\"jd\"] <<n [vid=\"ir\"] +3 [vid=\"f3\"]"]
             },
             {
               "key": 1,
-              "matches": ["[text="不感兴趣"][visibleToUser=true]"],
+              "matches": ["[text=\"不感兴趣\"][visibleToUser=true]"],
               "actionMaximum": 10,
               "resetMatch": "match"
             }
@@ -33658,7 +33658,7 @@
           "desc": "直接点击文字区域触发按钮",
           "rules": [
             {
-              "matches": ["[text="直接免拼"]"],
+              "matches": ["[text=\"直接免拼\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773838340114"]
             }
@@ -33669,7 +33669,7 @@
           "name": "功能类-直接免拼(备用)",
           "rules": [
             {
-              "matches": ["[childCount=0][text="直接免拼"][visibleToUser=true]"],
+              "matches": ["[childCount=0][text=\"直接免拼\"][visibleToUser=true]"],
               "activityIds": ["com.xunmeng.pinduoduo.activity.NewPageActivity"]
             }
           ]
@@ -35128,7 +35128,7 @@
           "name": "功能类-关闭广告",
           "rules": [
             {
-              "matches": ["[childCount=0][text="解锁第25日畅听"][visibleToUser=true]"],
+              "matches": ["[childCount=0][text=\"解锁第25日畅听\"][visibleToUser=true]"],
               "activityIds": ["com.luna.biz.main.main.MainActivity"]
             }
           ]
@@ -35138,7 +35138,7 @@
           "name": "功能类-立即解锁畅听",
           "rules": [
             {
-              "matches": ["[text="立即解锁 第30日畅听"][visibleToUser=true]"],
+              "matches": ["[text=\"立即解锁 第30日畅听\"][visibleToUser=true]"],
               "activityIds": ["com.ss.android.excitingvideo.ExcitingVideoActivity"]
             }
           ]
@@ -35148,7 +35148,7 @@
           "name": "功能类-继续互动",
           "rules": [
             {
-              "matches": ["[childCount=0][text="继续互动"][visibleToUser=true]"],
+              "matches": ["[childCount=0][text=\"继续互动\"][visibleToUser=true]"],
               "activityIds": ["com.ss.android.excitingvideo.ExcitingVideoActivity"]
             }
           ]
@@ -35817,7 +35817,7 @@
           "activityIds": ["com.tencent.karaoke.module.main.ui.MainTabActivity"],
           "rules": [
             {
-              "matches": ["@[id="com.tencent.karaoke:id/mem"]"],
+              "matches": ["@[id=\"com.tencent.karaoke:id/mem\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773816125125"]
             }
@@ -39313,7 +39313,7 @@
           "name": "开屏广告-关闭启动广告",
           "rules": [
             {
-              "matches": ["@FrameLayout <4 FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout <2 FrameLayout <2 ViewPager <2 ViewGroup < LinearLayout < FrameLayout < ViewPager < [vid="rv_main_container_wrapper"][visibleToUser=true]"],
+              "matches": ["@FrameLayout <4 FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout <2 FrameLayout <2 ViewPager <2 ViewGroup < LinearLayout < FrameLayout < ViewPager < [vid=\"rv_main_container_wrapper\"][visibleToUser=true]"],
               "activityIds": ["com.taobao.tao.welcome.Welcome"]
             }
           ]
@@ -44154,7 +44154,7 @@
           "name": "功能类-完成",
           "rules": [
             {
-              "matches": ["[childCount=0][text="完成"][visibleToUser=true]"],
+              "matches": ["[childCount=0][text=\"完成\"][visibleToUser=true]"],
               "activityIds": ["com.tencent.mm.plugin.appbrand.ui.AppBrandUI00"]
             }
           ]
@@ -45886,7 +45886,7 @@
           "activityIds": ["com.oray.sunlogin.application.Main"],
           "rules": [
             {
-              "matches": ["@[id="com.oray.sunlogin:id/close"]"],
+              "matches": ["@[id=\"com.oray.sunlogin:id/close\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773856783751"]
             }
@@ -45897,7 +45897,7 @@
           "name": "局部广告-上方滚动条",
           "rules": [
             {
-              "matches": ["@ImageView < [vid="close"][visibleToUser=true]"],
+              "matches": ["@ImageView < [vid=\"close\"][visibleToUser=true]"],
               "activityIds": ["com.oray.sunlogin.application.Main"]
             }
           ]
@@ -50961,7 +50961,7 @@
           "activityIds": ["cn.nubia.neostore.ui.main.HomeActivity"],
           "rules": [
             {
-              "matches": ["@[id="zte.com.market:id/iv_ad_close"]"],
+              "matches": ["@[id=\"zte.com.market:id/iv_ad_close\"]"],
               "fastQuery": true,
               "snapshotUrls": ["https://i.gkd.li/i/1773741905416"]
             }
