@@ -25836,7 +25836,7 @@
         },
         {
           "key": 3,
-          "name": "全屏广告-弹窗广告",
+          "name": "全屏广告-弹窗广告(新版)",
           "desc": "点击弹窗右上角关闭按钮",
           "activityIds": [
             "com.handsgo.jiakao.android.main.activity.MainActivity",
@@ -31408,7 +31408,7 @@
         },
         {
           "key": 3,
-          "name": "更新提示",
+          "name": "更新提示(右上角X)",
           "desc": "点击右上角X关闭更新提示",
           "activityIds": [
             "com.sankuai.waimai.business.page.homepage.MainActivity",
@@ -44270,7 +44270,7 @@
         },
         {
           "key": 41,
-          "name": "功能类-完成",
+          "name": "功能类-小程序内点击完成",
           "rules": [
             {
               "matches": [
@@ -46899,25 +46899,6 @@
               ],
               "exampleUrls": [
                 "https://e.gkd.li/a211ebb1-2177-4264-9a60-280a5f8e2777",
-              ],
-            },
-          ],
-        },
-        {
-          "key": 18,
-          "name": "局部广告-你可能感兴趣的人",
-          "desc": "点击卡片右上角关闭按钮",
-          "activityIds": [
-            "com.xingin.xhs.index.v2.IndexActivityV2",
-          ],
-          "rules": [
-            {
-              "matches": [
-                "@ImageView[clickable=true][width=49][height=49]",
-              ],
-              "fastQuery": true,
-              "snapshotUrls": [
-                "https://i.gkd.li/i/1773900160371",
               ],
             },
           ],
