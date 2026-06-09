@@ -1,7 +1,7 @@
 {
   "id": 996,
   "name": "小戴同学的GKD订阅",
-  "version": 510,
+  "version": 511,
   "author": "🐱",
   "checkUpdateUrl": "./gkd.version.json5",
   "supportUri": "https://github.com/Lin-arm/GKD_subscription/issues/new/choose",
@@ -4859,6 +4859,47 @@
           ],
         },
       ],
+    },
+
+    {
+      "id": "com.ai.h",
+      "name": "AH视频",
+      "groups": [
+        {
+          "key": 1,
+          "name": "关闭广告-2025-04-01",
+          "desc": "点击右上角关闭按钮",
+          "rules": [
+            {
+              "matches": ["@[desc=\"top_close_button\"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773682206694"]
+            }
+          ]
+        },
+        {
+          "key": 2,
+          "name": "规则二",
+          "desc": "点击广告卡片右上角X关闭广告",
+          "rules": [
+            {
+              "matches": ["@ImageView[width=42][height=42]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773685309870"]
+            }
+          ]
+        },
+        {
+          "key": 0,
+          "name": "千问广告",
+          "rules": [
+            {
+              "matches": ["[id=\"com.ai.h:id/ms_activity_sdk_interstitial_cacel\"]"],
+              "activityIds": ["com.meishu.sdk.activity.SdkInterstitialActivity"]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "com.algermusic.app",
@@ -14600,6 +14641,27 @@
             },
           ],
         },
+        {
+          "key": 2,
+          "name": "局部广告-关闭推荐内容",
+          "desc": "点击设置图标 → 不再展示推荐内容",
+          "forcedTime": 500,
+          "matchTime": 30000,
+          "rules": [
+            {
+              "key": 0,
+              "matches": ["[id="com.baidu.netdisk:id/iv_option"]"],
+              "actionMaximum": 1,
+              "resetMatch": "app"
+            },
+            {
+              "key": 1,
+              "matches": ["[id="com.baidu.netdisk:id/tv_text"][text="不再展示推荐内容"]"],
+              "actionMaximum": 1,
+              "resetMatch": "app"
+            }
+          ]
+        }
       ],
     },
     {
@@ -15904,6 +15966,16 @@
             },
           ],
         },
+        {
+          "key": 71,
+          "name": "功能类-关闭弹幕",
+          "rules": [
+            {
+              "matches": ["[desc="关闭弹幕"][visibleToUser=true]"],
+              "activityIds": ["com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -16607,6 +16679,26 @@
             },
           ],
         },
+        {
+          "key": 6,
+          "name": "局部广告-关闭广告",
+          "rules": [
+            {
+              "matches": ["[id="com.cainiao.wireless:id/single_banner_ad_close"]"],
+              "activityIds": ["com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity"]
+            }
+          ]
+        },
+        {
+          "key": 7,
+          "name": "局部广告-关闭推荐广告",
+          "rules": [
+            {
+              "matches": ["[id="com.cainiao.wireless:id/fl_ylh_feeds_close"]"],
+              "activityIds": ["com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -17904,6 +17996,16 @@
             },
           ],
         },
+        {
+          "key": 6,
+          "name": "局部广告-浮窗广告",
+          "rules": [
+            {
+              "matches": ["@ImageView <3 FrameLayout < FrameLayout <5 FrameLayout < [vid="picasso_view"][visibleToUser=true]"],
+              "activityIds": ["com.dianping.social.activity.NewFeedDetailActivity"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -25701,6 +25803,45 @@
             },
           ],
         },
+        {
+          "key": 4,
+          "name": "全屏广告-弹窗广告",
+          "desc": "点击弹窗右上角关闭按钮",
+          "activityIds": ["com.handsgo.jiakao.android.main.activity.MainActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="com.handsgo.jiakao.android:id/close"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773727357488"]
+            }
+          ]
+        },
+        {
+          "key": 5,
+          "name": "全屏广告-选驾校弹窗",
+          "desc": "点击右上角X关闭选驾校推荐弹窗",
+          "activityIds": ["com.handsgo.jiakao.android.main.activity.MainActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="com.handsgo.jiakao.android:id/iv_cancel"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773732449193"]
+            }
+          ]
+        },
+        {
+          "key": 6,
+          "name": "局部广告-帮我找驾校广告",
+          "desc": "点击右下角悬浮广告右上角关闭按钮",
+          "activityIds": ["com.handsgo.jiakao.android.main.activity.MainActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="com.handsgo.jiakao.android:id/closeImage"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773732588488"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -28913,6 +29054,19 @@
             },
           ],
         },
+        {
+          "key": 8,
+          "name": "全屏广告-VIP过期弹窗",
+          "desc": "点击右下角关闭按钮",
+          "activityIds": ["com.kugou.android.app.MediaActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="com.kugou.android:id/sbv"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773686207705"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -31197,6 +31351,19 @@
             },
           ],
         },
+        {
+          "key": 5,
+          "name": "更新提示",
+          "desc": "点击右上角X关闭更新提示",
+          "activityIds": ["com.sankuai.waimai.business.page.homepage.MainActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="com.sankuai.meituan.takeoutnew:id/btn_close"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773732017046"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -31706,6 +31873,41 @@
             },
           ],
         },
+        {
+          "key": 9,
+          "name": "功能类-原神自动签到",
+          "desc": "自动完成原神每日签到",
+          "forcedTime": 10000,
+          "activityIds": [".web2.MiHoYoWebActivity"],
+          "rules": [
+            {
+              "key": 0,
+              "name": "点击签到按钮",
+              "matches": ["@Image[clickable=true][width=140][height=70] << [text*="漏签"]"],
+              "excludeMatches": ["[text*="今日已签到"][visibleToUser=true]"],
+              "snapshotUrls": ["https://i.gkd.li/i/1773933529310"]
+            },
+            {
+              "key": 1,
+              "name": "关闭签到成功弹窗",
+              "preKeys": [0],
+              "matches": ["[text*="签到成功" || text*="获得奖励"][visibleToUser=true]"]
+            },
+            {
+              "key": 2,
+              "name": "关闭签到提醒弹窗",
+              "preKeys": [1],
+              "matches": ["[text="不用了" || text="关闭"][visibleToUser=true]"]
+            },
+            {
+              "key": 3,
+              "name": "从签到页返回",
+              "preKeys": [0, 1, 2],
+              "matches": ["@TextView[clickable=true][width=70][height=63] << [text="米游社原神每日签到"]"],
+              "snapshotUrls": ["https://i.gkd.li/i/1773933529310"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -32913,6 +33115,24 @@
             },
           ],
         },
+        {
+          "key": 9,
+          "name": "分段广告-关闭广告推荐",
+          "desc": "检测广告 → 不感兴趣",
+          "forcedTime": 200,
+          "rules": [
+            {
+              "key": 0,
+              "matches": ["@[vid="jd"] <<n [vid="ir"] +3 [vid="f3"]"]
+            },
+            {
+              "key": 1,
+              "matches": ["[text="不感兴趣"][visibleToUser=true]"],
+              "actionMaximum": 10,
+              "resetMatch": "match"
+            }
+          ]
+        }
       ],
     },
     {
@@ -33432,6 +33652,28 @@
             },
           ],
         },
+        {
+          "key": 27,
+          "name": "功能类-直接免拼",
+          "desc": "直接点击文字区域触发按钮",
+          "rules": [
+            {
+              "matches": ["[text="直接免拼"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773838340114"]
+            }
+          ]
+        },
+        {
+          "key": 28,
+          "name": "功能类-直接免拼(备用)",
+          "rules": [
+            {
+              "matches": ["[childCount=0][text="直接免拼"][visibleToUser=true]"],
+              "activityIds": ["com.xunmeng.pinduoduo.activity.NewPageActivity"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -34881,6 +35123,36 @@
             },
           ],
         },
+        {
+          "key": 100,
+          "name": "功能类-关闭广告",
+          "rules": [
+            {
+              "matches": ["[childCount=0][text="解锁第25日畅听"][visibleToUser=true]"],
+              "activityIds": ["com.luna.biz.main.main.MainActivity"]
+            }
+          ]
+        },
+        {
+          "key": 101,
+          "name": "功能类-立即解锁畅听",
+          "rules": [
+            {
+              "matches": ["[text="立即解锁 第30日畅听"][visibleToUser=true]"],
+              "activityIds": ["com.ss.android.excitingvideo.ExcitingVideoActivity"]
+            }
+          ]
+        },
+        {
+          "key": 102,
+          "name": "功能类-继续互动",
+          "rules": [
+            {
+              "matches": ["[childCount=0][text="继续互动"][visibleToUser=true]"],
+              "activityIds": ["com.ss.android.excitingvideo.ExcitingVideoActivity"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -35538,6 +35810,19 @@
             },
           ],
         },
+        {
+          "key": 3,
+          "name": "局部广告-广告卡片",
+          "desc": "点击广告卡片右上角关闭按钮",
+          "activityIds": ["com.tencent.karaoke.module.main.ui.MainTabActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="com.tencent.karaoke:id/mem"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773816125125"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -39023,6 +39308,16 @@
             },
           ],
         },
+        {
+          "key": 24,
+          "name": "开屏广告-关闭启动广告",
+          "rules": [
+            {
+              "matches": ["@FrameLayout <4 FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout <2 FrameLayout <2 ViewPager <2 ViewGroup < LinearLayout < FrameLayout < ViewPager < [vid="rv_main_container_wrapper"][visibleToUser=true]"],
+              "activityIds": ["com.taobao.tao.welcome.Welcome"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -43854,6 +44149,16 @@
             },
           ],
         },
+        {
+          "key": 76,
+          "name": "功能类-完成",
+          "rules": [
+            {
+              "matches": ["[childCount=0][text="完成"][visibleToUser=true]"],
+              "activityIds": ["com.tencent.mm.plugin.appbrand.ui.AppBrandUI00"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -45574,6 +45879,29 @@
             },
           ],
         },
+        {
+          "key": 5,
+          "name": "局部广告-顶部广告",
+          "desc": "点击广告横幅右上角关闭按钮",
+          "activityIds": ["com.oray.sunlogin.application.Main"],
+          "rules": [
+            {
+              "matches": ["@[id="com.oray.sunlogin:id/close"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773856783751"]
+            }
+          ]
+        },
+        {
+          "key": 6,
+          "name": "局部广告-上方滚动条",
+          "rules": [
+            {
+              "matches": ["@ImageView < [vid="close"][visibleToUser=true]"],
+              "activityIds": ["com.oray.sunlogin.application.Main"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -46442,6 +46770,19 @@
             },
           ],
         },
+        {
+          "key": 18,
+          "name": "局部广告-你可能感兴趣的人",
+          "desc": "点击卡片右上角关闭按钮",
+          "activityIds": ["com.xingin.xhs.index.v2.IndexActivityV2"],
+          "rules": [
+            {
+              "matches": ["@ImageView[clickable=true][width=49][height=49]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773900160371"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -50613,6 +50954,19 @@
             },
           ],
         },
+        {
+          "key": 3,
+          "name": "全屏广告-弹窗广告",
+          "desc": "点击弹窗中下方关闭按钮",
+          "activityIds": ["cn.nubia.neostore.ui.main.HomeActivity"],
+          "rules": [
+            {
+              "matches": ["@[id="zte.com.market:id/iv_ad_close"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773741905416"]
+            }
+          ]
+        }
       ],
     },
     {
@@ -60947,6 +61301,115 @@
           ],
         },
       ],
+    },
+
+    {
+      "id": "com.tdx.AndroidNew",
+      "name": "通达信",
+      "groups": [
+        {
+          "key": 0,
+          "name": "滚动广告",
+          "rules": [
+            {
+              "matches": ["@ImageView <2 View <4 View < View < View < ScrollView < View <2 View < View < View < View < FrameLayout < LinearLayout < [vid=\"flContent\"][visibleToUser=true]"],
+              "activityIds": ["com.tdx.Android.TdxActivity"]
+            },
+            {
+              "matches": ["[desc=\"确定\"][visibleToUser=true]"],
+              "activityIds": ["com.tdx.Android.TdxActivity"]
+            }
+          ]
+        },
+        {
+          "key": 1,
+          "name": "凇月落",
+          "rules": [
+            {
+              "matches": ["[childCount=0][text=\"\"][visibleToUser=true]"],
+              "activityIds": ["com.tdx.Android.TdxActivity"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "com.movie.yqs20260206090136",
+      "name": "一起刷",
+      "groups": [
+        {
+          "key": 1,
+          "name": "关闭悬浮广告",
+          "desc": "点击悬浮广告左上角关闭按钮",
+          "activityIds": ["com.movie.yqs.main.MainActivity"],
+          "rules": [
+            {
+              "matches": ["@[id=\"com.movie.yqs20260206090136:id/iv_adv_close\"]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773727137615"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "com.walixiwa.flash.player",
+      "name": "资源猫",
+      "groups": [
+        {
+          "key": 1,
+          "name": "关闭弹窗广告",
+          "desc": "点击右上角X关闭推广弹窗",
+          "activityIds": ["需要替换为实际Activity名称"],
+          "rules": [
+            {
+              "matches": ["@ImageView[width=67][height=67]"],
+              "snapshotUrls": ["https://i.gkd.li/i/1773683150229"]
+            }
+          ]
+        },
+        {
+          "key": 2,
+          "name": "关闭视频详情页广告",
+          "desc": "点击推荐卡片右上角X关闭广告",
+          "activityIds": ["com.jason.videocat.ui.screens.VideoDetailScreen"],
+          "rules": [
+            {
+              "matches": ["@ImageView[width=42][height=42]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773684021372"]
+            }
+          ]
+        },
+        {
+          "key": 3,
+          "name": "关闭应用下载弹窗",
+          "desc": "点击右上角X关闭下载应用弹窗",
+          "activityIds": ["com.jason.videocat.ui.screens.VideoDetailScreen"],
+          "rules": [
+            {
+              "matches": ["@ImageView[width=67][height=67]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773684350352"]
+            }
+          ]
+        },
+        {
+          "key": 5,
+          "name": "关闭搜索页弹窗广告",
+          "desc": "点击右上角X关闭搜索页弹窗",
+          "activityIds": ["com.jason.videocat.ui.screens.VideoSearchScreen"],
+          "rules": [
+            {
+              "matches": ["@ImageView[width=67][height=67]"],
+              "fastQuery": true,
+              "snapshotUrls": ["https://i.gkd.li/i/1773684570364"]
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "com.jxhy.kuwan.gga",
